@@ -9,9 +9,8 @@ class App extends Component {
       listItems: []
     }
   }
-  handleChange(event) {
-    console.log(event.target.value)
-    // this.setState({value: event.target.value.toUpperCase()});
+  handleChange(textInput) {
+    this.setState({ textInput: this.textInput.value})
   }
 
 
@@ -25,7 +24,7 @@ class App extends Component {
             type='text'
             value={this.state.value}
             placeholder='To do item here'
-            onChange={this.handleChange}
+            onChange={textInput => this.handleChange(textInput)}
             ></input>
             <button type='submit' value='submit'>+</button>
 
